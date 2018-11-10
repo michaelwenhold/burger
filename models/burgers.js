@@ -1,12 +1,12 @@
 module.exports = function(sequelize, Sequelize){
     var eatBurgers = sequelize.define("burgers", {
-        text: {
+        burger_name: {
             type: Sequelize.STRING,
             validate: {
                 isAlphanumeric: true,
             }
         },
-        complete: Sequelize.BOOLEAN
+        devoured: Sequelize.BOOLEAN
     });
     return eatBurgers;
 };
