@@ -11,5 +11,25 @@ module.exports = function(app) {
         .then(results => res.json(results));
     });
 
-    
-}
+    //POST route for burgers
+    app.post("/api/burgers", function(req, res){
+        db.burgers
+        .create(req.body)
+        .then(results => res.json(results));
+    });
+
+    //DELETE route for burgers
+    app.delete("/api/burgers/:id", function(req, res){
+        db.burgers
+        .destroy({ where:{ id: req.params.id}})
+        .then(results => res.json(results));
+    });
+
+    //PUT route for burgers
+    app.put("/api/burgers", function(req, res){
+        db.burgers
+        .update({ burger_name: req.body.burger_name, devoured: req.body.devoured},
+            {where: {id: req.body.id}})
+        .then(results => res.json(results));
+    });
+};
