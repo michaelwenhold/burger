@@ -1,0 +1,18 @@
+body {
+    background-image: url("https://cdn5.vectorstock.com/i/1000x1000/93/34/seamless-pattern-of-burgers-background-for-fast-vector-18919334.jpg");
+}
+
+.jumbotron {
+    opacity: 0;
+}
+
+button {
+    margin-top: 20px;
+}
+
+p {
+    font-size: 40px;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
