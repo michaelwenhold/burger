@@ -28,7 +28,7 @@ module.exports = function(app) {
     //PUT route for burgers
     app.put("/api/burgers", function(req, res){
         db.burgers
-        .update({ burger_name: req.body.burger_name, devoured: req.body.devoured},
+        .update({ title: req.body.title, body: req.body.body, category: req.body.category},
             {where: {id: req.body.id}})
         .then(results => res.json(results));
     });
